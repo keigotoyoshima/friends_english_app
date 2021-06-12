@@ -96,7 +96,7 @@ class _LoginScreen1State extends State<LoginScreen1> {
       inAsyncCall: _saving,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('login'),
+          title: Text('Login'),
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -106,6 +106,7 @@ class _LoginScreen1State extends State<LoginScreen1> {
             children: <Widget>[
               TextField(
                   controller:_text1,
+                  cursorColor: Colors.tealAccent[200],
                   onChanged: (value) {
                     email = value;
                   },
@@ -123,6 +124,7 @@ class _LoginScreen1State extends State<LoginScreen1> {
                   onChanged: (value) {
                     password = value;
                   },
+                  cursorColor: Colors.tealAccent[200],
                   decoration:
                   kInputDecoration.copyWith(
                     hintText: 'Input your password',
@@ -138,10 +140,10 @@ class _LoginScreen1State extends State<LoginScreen1> {
                     onPressed: () async{
                       Navigator.pushNamed(context, LoginScreen2.routeName);
                     },
-                    child: const Text(
+                    child:  Text(
                       'Forget password?',
                       style: TextStyle(
-                        color: Colors.blueAccent,
+                        color: Colors.tealAccent[200],
                         fontSize: 20,
                       ),
                     ),
@@ -152,7 +154,7 @@ class _LoginScreen1State extends State<LoginScreen1> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   elevation: 5.0,
                   child: MaterialButton(
@@ -238,6 +240,10 @@ class _LoginScreen1State extends State<LoginScreen1> {
                     height: 42.0,
                     child: Text(
                       'Log In',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20
+                      ),
                     ),
                   ),
                 ),

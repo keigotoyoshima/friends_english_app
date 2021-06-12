@@ -107,7 +107,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
         appBar: AppBar(
           automaticallyImplyLeading: false,
 
-          title: Text('register  2/2'),
+          title: Text('Register  2/2'),
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -116,6 +116,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextField(
+                cursorColor: Colors.tealAccent[200],
                   controller: _text3,
                   onChanged: (value) {
                     group = value;
@@ -129,6 +130,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
                 height: 8.0,
               ),
               TextField(
+                cursorColor: Colors.tealAccent[200],
                   controller: _text4,
                   onChanged: (value) {
                     groupPassword = value;
@@ -148,6 +150,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
                 height: 8.0,
               ),
               TextField(
+                cursorColor: Colors.tealAccent[200],
                   controller: _text5,
                   onChanged: (value) {
                     userName = value;
@@ -164,7 +167,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
-                  color: Colors.blueAccent,
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   elevation: 5.0,
                   child: MaterialButton(
@@ -215,11 +218,11 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
                               });
                               Navigator.pushNamed(context, MyHomePage.routeName);
                             }else{
-                              //groupPasswordが間違っていた場合
-                              createSnackBar(context, 'Wrong group password provided for that group or that group already exists.');
                               setState(() {
                                 _saving = false;
                               });
+                              //groupPasswordが間違っていた場合
+                              createSnackBar(context, 'Wrong group password provided for that group or that group already exists.');
                             }
                           } else{
                             //group名が存在しない場合
@@ -252,7 +255,7 @@ class _RegistrationScreen2State extends State<RegistrationScreen2> {
                     height: 42.0,
                     child: Text(
                       'Register',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),

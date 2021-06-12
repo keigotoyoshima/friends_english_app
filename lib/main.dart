@@ -57,7 +57,9 @@ class ShareCalendar extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context)=>Data(),
       child: MaterialApp(
-        theme: ThemeData.dark(),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData.dark(
+        ),
         initialRoute: WelcomeScreenPage.routeName,
         routes: {
           WelcomeScreenPage.routeName: (context) => WelcomeScreenPage(),

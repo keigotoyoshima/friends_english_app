@@ -61,7 +61,7 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
       inAsyncCall: _saving,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('register  1/2'),
+          title: Text('Register  1/2'),
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -70,11 +70,13 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextField(
+                cursorColor: Colors.tealAccent[200],
                 controller: _text1,
                   onChanged: (value) {
                     email = value;
                   },
                   decoration:
+
                   kInputDecoration.copyWith(
                       hintText: 'Input your email',
                       errorText: _validate1 ? "Value can't be empty": null,
@@ -85,6 +87,7 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
               ),
               TextField(
                   controller: _text2,
+                  cursorColor: Colors.tealAccent[200],
                   onChanged: (value) {
                     password = value;
                   },
@@ -101,7 +104,7 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
-                  color: Colors.blueAccent,
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   elevation: 5.0,
                   child: MaterialButton(
@@ -169,9 +172,16 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
 
 
                           } else if (e.code == 'wrong-password') {
+                            setState(() {
+                              _saving = false;
+                            });
                             //emailに対してのパスワードが違う場合
                             createSnackBar(context,'Wrong password provided for that user.' );
+
                           }else{
+                            setState(() {
+                              _saving = false;
+                            });
                             createSnackBar(context, 'No user found for that email.');
                           }
                         }
@@ -186,7 +196,7 @@ class _RegistrationScreen1State extends State<RegistrationScreen1> {
                     height: 42.0,
                     child: Text(
                       'Register',
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                     ),
                   ),
                 ),

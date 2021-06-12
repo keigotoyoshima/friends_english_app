@@ -49,7 +49,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
       inAsyncCall: _saving,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('login'),
+          title: Text('Login'),
         ),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.0),
@@ -58,6 +58,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               TextField(
+                cursorColor: Colors.tealAccent[200],
                 key: _formGlobalKey,
                   controller:_text1,
                   onChanged: (value) {
@@ -74,7 +75,7 @@ class _LoginScreen2State extends State<LoginScreen2> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 16.0),
                 child: Material(
-                  color: Colors.lightBlueAccent,
+                  color: Colors.white,
                   borderRadius: BorderRadius.all(Radius.circular(30.0)),
                   elevation: 5.0,
                   child: MaterialButton(
@@ -102,6 +103,9 @@ class _LoginScreen2State extends State<LoginScreen2> {
                     height: 42.0,
                     child: Text(
                       'Send a email',
+                      style: TextStyle(color: Colors.black,
+                        fontSize: 20
+                      ),
                     ),
                   ),
                 ),

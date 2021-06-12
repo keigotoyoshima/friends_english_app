@@ -10,7 +10,7 @@ class SearchPageCardListView extends StatelessWidget {
     final SearchData data = ModalRoute.of(context).settings.arguments;
     return Scaffold(
       appBar: AppBar(
-        title: Text('result'),
+        title: Text('Result'),
       ),
       body: Column(
         children: [
@@ -19,44 +19,47 @@ class SearchPageCardListView extends StatelessWidget {
             child: Card(
               color: Color(0xD2FFFFFF),
               child: Padding(
-                padding: const EdgeInsets.only(top: 15.0, left: 15, right: 15),
+                padding: const EdgeInsets.all(10.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment
                       .start,
                   children: [
-                    Row(
-                      children: [
-                        Text(
-                            "Word:  ",
-                            style: TextStyle(
-                                fontSize: 25.0,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black)
-                        ),
-                        Text(
-                            data.wordResult,
-                            style: TextStyle(
-                              // fontWeight: FontWeight.bold,
-                                fontSize: 25.0,
-                                color: Colors.black)
-                        ),
-                      ],
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        children: [
+                          Text(
+                              "Word:  ",
+                              style: TextStyle(
+                                  fontSize: 25.0,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black)
+                          ),
+                          Text(
+                              data.wordResult,
+                              style: TextStyle(
+                                // fontWeight: FontWeight.bold,
+                                  fontSize: 25.0,
+                                  color: Colors.black)
+                          ),
+                        ],
+                      ),
                     ),
-                    SizedBox(height: 10,),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Expanded(
-                          child: Text(
+                    Expanded(
+                        child: SizedBox()),
+                    Expanded(
+                      flex: 5,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
                               'Pronunciation:  ',
                               style: TextStyle(
                                   fontSize: 25.0,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black)
                           ),
-                        ),
-                        Expanded(
-                          child: Container(
+                          Container(
                             height: 25,
                             child: ListView.builder(
                                 scrollDirection:Axis.horizontal,
@@ -66,9 +69,9 @@ class SearchPageCardListView extends StatelessWidget {
                                   return PronunciationWidget(data: data, index: index);
                                 }
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
 
                   ],

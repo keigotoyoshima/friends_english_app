@@ -314,6 +314,7 @@ class _SearchPageState extends State<SearchPage> {
                                   pronunciation: pronunciation,
                                 )
                             );
+                            FocusManager.instance.primaryFocus.unfocus();
 
                           }
                           initialize();
