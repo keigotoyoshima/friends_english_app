@@ -1,17 +1,24 @@
-# friends_english_app
+# Friends English 
+
+<img src="https://user-images.githubusercontent.com/39795418/152671098-87aa1157-c1ed-4b20-80c8-78fad97ee2db.png" width="100">
 
 A new Flutter application.
 
+
+
+
+
 ## Getting Started
+Please download my app from below.
 
-This project is a starting point for a Flutter application.
+### Apple Store url : https://apps.apple.com/jp/app/friends-english/id1571244104?l=en#?platform=iphone
 
-A few resources to get you started if this is your first Flutter project:
+## Concepts
+This app helps you build up your English vocabulary.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+When you memorize english words, you must feel so boring.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-# friends_english_app
+However, this app make it possible to learn them with your frinends by using chat built in this app.
+
+Let's check it out !!
+
